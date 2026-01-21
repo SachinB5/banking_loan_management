@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-white{
+    background-color: rgb(208, 200, 200) !important;
+}

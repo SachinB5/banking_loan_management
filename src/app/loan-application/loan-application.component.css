@@ -1,0 +1,11 @@
+.form-control {
+  border: 1px solid black !important;
+}
+.table {
+  border: 1px solid black !important;
+}
+@media screen and (max-width: 768px) {
+  .laons {
+    margin-top: 10px;
+  }
+}
