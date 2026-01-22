@@ -1,4 +1,4 @@
-export interface Application {
+export class Application {
   applicantID: number;
   fullName: string;
   applicationStatus: string;
@@ -14,15 +14,50 @@ export interface Application {
   employmentStatus: string;
   creditScore: number;
   assets: string;
-  dateApplied: string;
-  Loans: Loan[];
+  dateApplied: Date;
+  Loans: Loans[];
   customerId: number;
+
+  constructor() {
+    this.applicantID = 0;
+    this.fullName = '';
+    this.applicationStatus = '';
+    this.panCard = '';
+    this.dateOfBirth = '';
+    this.email = '';
+    this.phone = '';
+    this.address = '';
+    this.city = '';
+    this.state = '';
+    this.zipCode = '';
+    this.annualIncome = 0;
+    this.employmentStatus = '';
+    this.creditScore = 0;
+    this.assets = '';
+    this.dateApplied = new Date();
+    this.Loans = [];
+    this.customerId = 0;
+  }
 }
 
-export interface Loan {
+export class Loans {
   loanID: number;
   applicantID: number;
   bankName: string;
   loanAmount: number;
   emi: number;
+
+  constructor() {
+    this.loanID = 0;
+    this.applicantID = 0;
+    this.bankName = '';
+    this.loanAmount = 0;
+    this.emi = 0;
+  }
+}
+
+export interface ApplicationResponse {
+  Message: string;
+  Result: boolean;
+  Data: any;
 }
